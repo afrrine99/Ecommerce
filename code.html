@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Section with Image</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .section-image10 {
+            position: relative;
+            width: 100%;
+            height: 50vh;
+            background-image: url('image/ss.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 50px;
+        }
+
+        .content-box {
+            padding: 20px;
+            max-width: 400px;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .content-box h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .content-box p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .content-box button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .content-box button:hover {
+            background-color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .content-box h1 {
+                font-size: 28px;
+            }
+
+            .content-box p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-image {
+                padding-left: 20px;
+            }
+
+            .content-box {
+                max-width: 90%;
+            }
+
+            .content-box h1 {
+                font-size: 24px;
+            }
+
+            .content-box p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="section-image10">
+        <div class="content-box">
+            <h1>Win at gifting with cyinthia eGift Cards</h1>
+            <p>Spoil them with choice on any occasion with heartwarming designs and hassle-free redemption.</p>
+            <button>Start gifting</button>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New</title>
+  <link rel="stylesheet" href="lockfooter.css">
+    <script src="lockfooter.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+    background-color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.cart-icons a img {
+    height: 25px;
+    margin-left: 15px;
+}
+
+    .main-section {
+      text-align: center;
+      padding: 50px 0;
+      background-color: #eee;
+    }
+
+    .video-container {
+      max-width: 80%;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .center-content {
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .center-content h2 {
+      margin-bottom: 10px;
+    }
+
+    .images-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px 10%;
+    }
+
+    .image-item {
+      flex-basis: 48%;
+    }
+
+    .image-item img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .image-content {
+      margin-top: 10px;
+      text-align: right;
+    }
+
+    .learn-more-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .learn-more-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .statistics-section {
+      text-align: center;
+      padding: 50px 0;
+      background-color: #f9f9f9;
+    }
+
+    .statistics-section h2 {
+      margin-bottom: 40px;
+    }
+
+    .stat-circles {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .stat-item {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #007bff;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-size: 18px;
+      position: relative;
+    }
+
+    .stat-title {
+      position: absolute;
+      bottom: -40px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* New Section with Colored Boxes */
+    .colored-boxes-section {
+      display: flex;
+      justify-content: space-between;
+      padding: 50px 10%;
+      background-color: #f4f4f4;
+    }
+
+    .colored-box {
+      flex-basis: 48%;
+      background-color: blue;
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      position: relative;
+    }
+
+    .colored-box:nth-child(2) {
+      background-color: indigo;
+    }
+
+    .colored-box h3 {
+      margin-bottom: 15px;
+    }
+
+    .colored-box p {
+      margin-bottom: 20px;
+    }
+
+    .colored-box .learn-more-btn {
+      background-color: white;
+      color: #007bff;
+      transition: background-color 0.3s ease;
+    }
+
+    .colored-box:nth-child(2) .learn-more-btn {
+      color: indigo;
+    }
+
+    .colored-box .learn-more-btn:hover {
+      background-color: #f0b3b3;
+      color: #333;
+    }
+
+  </style>
+</head>
+<body>
+    <header id="stickyHeader">
+        <div class="main-header">
+            <div class="logo">
+                <a href="index.html"><img src="image/logo.JPG" alt="Logo"></a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" data-page="home">Home</a>
+                <a href="Featured.html" data-page="about">About</a>
+                <a href="shop.html" data-page="shop">Shop</a>
+                <a href="createaccount.html" data-page="contact">Contact</a>
+            </nav>
+            <div class="cart-icons">
+                <a href=""><img src="image/notifiction.png" alt="Chat"></a>
+            <a href="chat.html"><img src="image/bookmark.svg" alt="Bookmark"></a>
+            <a href="mony.html"><img src="image/mony.png" alt="Locker"></a>
+            </div>
+        </div>
+    </header>
+
+  <!-- Main Video Section -->
+  <section class="main-section">
+    <div class="video-container">
+      <video controls>
+        <source src="video/video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- Center Heading and Paragraph -->
+  <section class="center-content">
+    <h2>We connect people and build communities to create economic opportunity for all.</h2>
+    <p>At cBay, we create pathways to connect millions of sellers and buyers in more than 1 market around the world. Our technology empowers our customers, providing everyone the opportunity to grow and thrive — no matter who they are or where they are in the world.</p>
+  </section>
+
+  <!-- Two Aligned Images Section -->
+  <section class="images-section">
+    <div class="image-item">
+      <img src="image/seller.jpg" alt="For Sellers">
+      <div class="image-content">
+        <h3>For Sellers</h3>
+        <h3>Reach new customers & grow your business</h3>
+        <p>We offer sellers the ability to grow a business with little barrier to entry regardless of size, background or geographic location.</p>
+        <a href="#" class="learn-more-btn">Learn More</a>
+      </div>
+    </div>
+    <div class="image-item">
+      <img src="image/buyer.jpg" alt="For Buyers">
+      <div class="image-content">
+        <h3>For Buyers</h3>
+        <h3>Explore vast inventory & unique selection</h3>
+        <p>Buyers who shop on the marketplace enjoy a highly personalized experience with unparalleled selection at great value.</p>
+        <a href="#" class="learn-more-btn">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Centered Statistics Section -->
+  <section class="statistics-section">
+    <h2>Global Scale & Reach</h2>
+    <div class="stat-circles">
+      <div class="stat-item">
+        <strong>2.1B</strong>
+        <div class="stat-title">Approximate number of live listings</div>
+      </div>
+      <div class="stat-item">
+        <strong>132M</strong>
+        <div class="stat-title">Active buyers worldwide</div>
+      </div>
+      <div class="stat-item">
+        <strong>190+</strong>
+        <div class="stat-title">Markets around the world</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Section with Colored Boxes -->
+  <section class="colored-boxes-section">
+    <div class="colored-box">
+      <h3>Technology</h3>
+      <p>cin creates inspiring ecommerce experiences for our buyers, sellers and developers. Embracing innovation has been a cornerstone of our growth and customer loyalty for more than 2 years – encompassing technologies such as AI, computer vision, natural language processing and machine translation.</p>
+      <a href="#" class="learn-more-btn">Learn More</a>
+    </div>
+    <div class="colored-box">
+      <h3>Impact</h3>
+      <p>Every day, people build businesses on cin. Nonprofit organizations raise vital funds. Entrepreneurs gain new skills and access to new markets where they can turn their dreams and ideas into business success.</p>
+      <a href="#" class="learn-more-btn">Learn More</a>
+    </div>
+  </section>
+   <!-- Footer Section -->
+   <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Shipping Info</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column Payment">
+        <h3>Payment</h3>
+        <div class="social-icons">
+          <a href="#"><img src="image/am.PNG" alt="Facebook"></a>
+          <a href="#"><img src="image/em.PNG" alt="Twitter"></a>
+          <a href="#"><img src="image/nogod.PNG" alt="Instagram"></a>
+          <a href="#"><img src="image/bikash1.PNG" alt="LinkedIn"></a>
+        </div>
+      </div>
+  
+      <!-- New Follow Us Column -->
+      <div class="footer-column follow-us">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><img src="image/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="image/google.png" alt="Twitter"></a>
+          <a href="#"><img src="image/instrg.png" alt="Instagram"></a>
+          <a href="#"><img src="image/you.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-inner-last">
+      <p>© 2024 Cyinthia. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.logo {
+    width: 30px; /* Adjust according to your logo size */
+}
+
+.header-right p {
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    padding: 40px;
+}
+
+.left-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-image {
+    width: 100%; /* Adjust according to your image size */
+    max-width: 400px;
+}
+
+.right-side {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.input-box, .create-account-btn, .social-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.name-boxes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.password-box {
+    display: flex;
+    align-items: center;
+}
+
+.eye-icon {
+    cursor: pointer;
+    margin-left: -40px;
+}
+
+.create-account-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.social-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Spacing between buttons */
+    margin: 20px 0; /* Margin above and below the buttons */
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff; /* White background */
+    border: 2px solid #007BFF; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding inside the button */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.social-btn:hover {
+    background-color: #f0f0f0; /* Change background on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.social-icon {
+    width: 20px; /* Icon width */
+    height: 20px; /* Icon height */
+    margin-right: 10px; /* Spacing between icon and text */
+}
+
+.social-btn img {
+    vertical-align: middle; /* Align icon vertically */
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
