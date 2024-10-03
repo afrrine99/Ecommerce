@@ -1,0 +1,35 @@
+.right-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column; /* Centering button below the slider */
+}
+
+.slider-wrapper {
+    overflow: hidden;
+    width: 80%; /* Adjust as needed */
+}
+
+.image-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 auto; /* Allow slides to size based on their content */
+    text-align: center;
+    margin: 10px; /* Space between products */
+}
+
+.slide img {
+    width: 100%;
+    max-width: 150px; /* Adjust image size */
+}
+
+.load-more {
+    margin-top: 20px; /* Space between the slider and button */
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}

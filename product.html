@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product View - Daraz Style</title>
+    <link rel="stylesheet" href="dot.css">
+    <script src="dot.js"></script>
+    <link rel="stylesheet" href="new.css">
+    <script src="new.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1fr;
+            gap: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Left side: Product Images */
+        .product-images {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-image {
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+
+        .thumbnail-images {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .thumbnail-images img {
+            width: 60px;
+            height: 60px;
+            border: 1px solid #ddd;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .thumbnail-images img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Right side: Product Detail */
+        .product-detail {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .product-price {
+            font-size: 28px;
+            color: #f57224;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .price-section {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            color: #f57224;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            margin-right: 10px;
+        }
+
+        .discount {
+            color: #388e3c;
+            font-weight: bold;
+        }
+
+        .quantity {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .quantity button {
+            padding: 5px 10px;
+            background-color: #ddd;
+            border: none;
+            cursor: pointer;
+        }
+
+        .quantity input {
+            width: 40px;
+            text-align: center;
+            margin: 0 10px;
+        }
+
+        .buy-buttons {
+            margin-top: 20px;
+        }
+
+        .buy-buttons button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #f57224;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-buttons button:hover {
+            background-color: #d4551c;
+        }
+
+        /* Delivery and Return Options */
+        .delivery-options, .return-warranty {
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+            color: #555;
+        }
+
+        .delivery-options img, .return-warranty img {
+            width: 20px;
+            margin-right: 5px;
+        }
+
+        .location, .standard-delivery, .cash-on-delivery, .return-policy, .warranty {
+            margin-bottom: 10px;
+        }
+
+        .app-download {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .app-download img {
+            width: 80px;
+            margin-right: 10px;
+        }
+
+        .app-download a {
+            color: #f57224;
+            text-decoration: none;
+        }
+
+        .app-download a:hover {
+            text-decoration: underline;
+        }
+
+        .qr-app {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .qr-app img {
+            width: 100px;
+            margin-right: 20px;
+        }
+        .featured-brands, .promotion-section {
+    margin-top: 2em;
+}
+
+.featured-brands h2, .promotion-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.brand-grid, .promo-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.brand-card, .promo-card {
+    background-color: white;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 23%;
+}
+
+.brand-card img, .promo-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <!-- Product Images Section -->
+    <div class="product-images">
+        <img id="mainImage" class="main-image" src="image/product.webp" alt="Main Product Image">
+        <div class="thumbnail-images">
+            <img src="image/product.webp" alt="Thumbnail 1" onclick="changeImage(this)">
+            <img src="image/product.webp" alt="Thumbnail 2" onclick="changeImage(this)">
+            <img src="image/product.webp" alt="Thumbnail 3" onclick="changeImage(this)">
+            <img src="image/product.webp" alt="Thumbnail 4" onclick="changeImage(this)">
+        </div>
+    </div>
+
+    <!-- Product Detail Section -->
+    <div class="product-detail">
+        <div class="product-title">5 Layers Simple Shoe Rack Folding Shoe Cabinet</div>
+        <div class="ratings">★★★★★ 64 Ratings</div>
+        <div class="brand-info">Brand: No Brand | Storage & Organization</div>
+        <div class="price-section">
+            <span class="price">৳ 1,299</span>
+            <span class="old-price">৳ 3,990</span>
+            <span class="discount">-67%</span>
+        </div>
+        <div class="color-family">Color Family: <strong>Black</strong></div>
+
+        <!-- Quantity -->
+        <div class="quantity">
+            <button onclick="decreaseQuantity()">-</button>
+            <input type="number" id="quantity" value="1" min="1">
+            <button onclick="increaseQuantity()">+</button>
+        </div>
+
+        <!-- Buy Buttons -->
+        <div class="buy-buttons">
+            <button>Add to Cart</button>
+            <button>Buy Now</button>
+        </div>
+    </div>
+
+    <!-- Delivery Options Section -->
+    <div class="delivery-options">
+        <div class="location">
+            <p>Delivery Options:</p>
+            <img src="image/location.png" alt="Location">
+            Dhaka, Dhaka North, Banani Road No. 12 - 19<a href="#">CHANGE</a>
+        </div>
+        <div class="standard-delivery">
+            <img src="image/standard.jpg" alt="Delivery"> 
+            Standard Delivery ৳ 60 <br> Guaranteed by 24-27 Sep
+        </div>
+        <div class="cash-on-delivery">
+            <img src="image/cash.png" alt="Cash on Delivery"> 
+            Cash on Delivery Available
+        </div>
+
+        <!-- Return & Warranty Section -->
+        <div class="return-warranty">
+            <div class="return-policy">
+                <p>Return & Warranty </p>
+                <img src="image/return.png" alt="Return"> 
+                14 Days Easy Return
+            </div>
+            <div class="warranty">
+                <img src="image/warrenty.png" alt="Warranty"> 
+                3 Months Brand Warranty
+            </div>
+        </div>
+
+        <!-- QR Code & App Section -->
+        <div class="qr-app">
+            <img src="image/qr.png" alt="QR Code">
+          <div class="app-download">
+                <div>Download app to enjoy exclusive discounts!</div>
+                <div><a href="#">Scan with mobile</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="product-details">
+    <h1>Product Details of 5 Layers Simple Shoe Rack Folding Shoe Cabinet</h1>
+    
+    <div class="container">
+        <div class="container-inner-left">
+            <h2>Brand:</h2>
+            <p>XYZ Company</p>
+        </div>
+        <div class="container-inner-right">
+            <h2>Material:</h2>
+            <p>XYZ Company</p>
+    </div>
+    </div>
+    <p>Product details of 4 Layers Simple Shoe Rack Folding Shoe Cabinet Multi-layer Shoes Storage Organizer Space-Saving Shoes Shelf Door Color Matching Cabinets</p>
+    <div class="step">
+        <h3>Step 1:</h3>
+        <div class="dots">Product Title: Simple Shoe Rack Folding Shoe Cabinet Multi-layer Shoes Storage Organizer</div>
+    </div>
+    <div class="step">
+        <h3>Step 2:</h3>
+        <div class="dots">Product Title: Simple Shoe Rack Folding Shoe Cabinet Multi-layer Shoes Storage Organizer</div>
+    </div>
+    <div class="step">
+        <h3>Step 3:</h3>
+        <div class="dots">Product Title: Simple Shoe Rack Folding Shoe Cabinet Multi-layer Shoes Storage Organizer</div>
+    </div>
+    <div class="step">
+        <h3>Step 4:</h3>
+        <div class="dots">Product Title: Simple Shoe Rack Folding Shoe Cabinet Multi-layer Shoes Storage Organizer</div>
+    </div>
+<p>Specifications of 5 Layers Simple Shoe Rack Folding Shoe Cabinet Multi-layer Shoes Storage Organizer Space-Saving Shoes Shelf D</p>
+<div class="container">
+<div class="container-inner-left">
+    <h2>Brand:</h2>
+    <p>No Brand</p>
+    <p>Material</p>
+    <p>Fabric and Plastic</p>
+</div>
+<div class="container-inner-right">
+    <h2>Material:</h2>
+    <p>XYZ Company</p>
+</div>
+</div>
+
+    <div class="view-more-container">
+        <button class="view-more-btn" onclick="viewMore()">View More</button>
+    </div>
+
+    <div class="more-info" id="moreInfo">
+        <h2>Additional Product Information:</h2>
+        <p>This shoe rack is foldable, space-saving, and ideal for storing multiple pairs of shoes. It's made of sturdy materials and has a modern design that complements any home decor.</p>
+    </div>
+</div>
+<div class="product-details">
+    <h1>Questions about this product</h1>
+    <center><img src="image/question.png" alt="Product Image" class="small-img"></center>
+    <p><center>There are no questions yet.</center></p>
+    <p><center>Login or Register to ask the seller now and answer will show here.</center></p>
+</div>
+  <!-- Featured Brands Section -->
+  <section class="featured-brands">
+    <h2>Featured Brands</h2>
+    <div class="brand-grid">
+        <div class="brand-card">
+            <img src="image/product.webp" alt="Brand 1">
+            <p>Brand Name 1</p>
+        </div>
+        <div class="brand-card">
+            <img src="image/product.webp" alt="Brand 2">
+            <p>Brand Name 2</p>
+        </div>
+        <div class="brand-card">
+            <img src="image/product.webp" alt="Brand 3">
+            <p>Brand Name 3</p>
+        </div>
+        <div class="brand-card">
+            <img src="image/product.webp" alt="Brand 4">
+            <p>Brand Name 4</p>
+        </div>
+    </div>
+</section>
+
+<!-- Promotion Section -->
+<section class="promotion-section">
+    <h2>Special Deals</h2>
+    <div class="promo-grid">
+        <div class="promo-card">
+            <img src="image/product.webp" alt="Promo 1">
+            <p>Promo Offer 1</p>
+        </div>
+        <div class="promo-card">
+            <img src="image/product.webp" alt="Promo 2">
+            <p>Promo Offer 2</p>
+        </div>
+        <div class="promo-card">
+            <img src="image/product.webp" alt="Promo 3">
+            <p>Promo Offer 3</p>
+        </div>
+    </div>
+</section>
+<!-- JavaScript to handle image change and quantity -->
+<script>
+    function changeImage(element) {
+        var mainImage = document.getElementById("mainImage");
+        mainImage.src = element.src;
+    }
+
+    function decreaseQuantity() {
+        var quantityInput = document.getElementById("quantity");
+        var currentValue = parseInt(quantityInput.value);
+        if (currentValue > 1) {
+            quantityInput.value = currentValue - 1;
+        }
+    }
+
+    function increaseQuantity() {
+        var quantityInput = document.getElementById("quantity");
+        var currentValue = parseInt(quantityInput.value);
+        quantityInput.value = currentValue + 1;
+    }
+</script>
+
+</body>
+</html>

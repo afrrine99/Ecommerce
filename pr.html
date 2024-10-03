@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 250px; /* Ensures sections don't get too narrow */
+        }
+        .product-image {
+            text-align: center;
+        }
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+        }
+        .thumbnails {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .thumbnails img {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        .ratings {
+            color: #ff9f00;
+        }
+        .price {
+            color: #d9534f;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .old-price {
+            text-decoration: line-through;
+            color: grey;
+            font-size: 16px;
+        }
+        .discount {
+            color: #28a745;
+            margin-left: 10px;
+        }
+        .buy-options {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .quantity {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .quantity button {
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            background-color: white;
+            cursor: pointer;
+        }
+        .quantity input {
+            width: 40px;
+            text-align: center;
+            border: 1px solid #ccc;
+            margin: 0 5px;
+        }
+        .buy-buttons button {
+            padding: 10px 20px;
+            border: none;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .buy-now {
+            background-color: #007bff;
+            color: white;
+        }
+        .add-to-cart {
+            background-color: #ff9900;
+            color: white;
+        }
+        .right-section .delivery-options, .return-warranty, .qr-app {
+            margin-top: 20px;
+        }
+        .right-section img {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+        .location, .standard-delivery, .cash-on-delivery, .return-policy, .app-download {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .qr-app img {
+            width: 100px;
+            height: 100px;
+        }
+        .video-container {
+            display: none;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .video-container video {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Section -->
+        <div class="section left-section">
+            <div class="product-image">
+                <img id="mainImage" src="image/pro.webp" alt="DEFY Gravity Earbuds">
+            </div>
+            <div class="video-container" id="videoContainer">
+                <video id="productVideo" controls>
+                    <source src="video/product-demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="thumbnails">
+                <img src="image/thumbnail1.webp" onclick="changeImage(this.src, 'video/product-demo.mp4')" alt="Thumbnail 1">
+                <img src="image/pro.webp" onclick="changeImage(this.src, '')" alt="Thumbnail 2">
+                <img src="image/pro.webp" onclick="changeImage(this.src, '')" alt="Thumbnail 3">
+                <img src="image/pro.webp" onclick="changeImage(this.src, '')" alt="Thumbnail 4">
+            </div>
+        </div>
+
+        <!-- Middle Section -->
+        <div class="section middle-section">
+            <div class="product-title">DEFY Gravity Turbo TWS Earbuds with 50ms Low Latency for Gaming</div>
+            <div class="ratings">★★★★★ 64 Ratings | 28 Answered Questions</div>
+            <div class="ratings">Brand: No Brand | More Audio from No Brand</div>
+            <div class="price-section">
+                <span class="price">৳ 1,299</span>
+                <span class="old-price">৳ 3,990</span>
+                <span class="discount">-67%</span>
+            </div>
+            <div class="color-family">Color Family: <strong>Black</strong></div>
+
+            <div class="buy-options">
+                <div class="quantity">
+                    <button onclick="decreaseQuantity()">-</button>
+                    <input type="number" id="quantity" value="1" min="1">
+                    <button onclick="increaseQuantity()">+</button>
+                </div>
+            </div>
+            <div class="buy-buttons">
+                <button class="buy-now">Buy Now</button>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="section right-section">
+            <div class="delivery-options">
+                <div class="location">
+                    <p>Delivery Options:</p>
+                </div>
+                <img src="image/location.png" alt="Location"> 
+                Dhaka, Dhaka North, Banani Road No. 12 - 19 <a href="#">CHANGE</a>
+            </div>
+            <div class="standard-delivery">
+                <img src="https://example.com/delivery-icon.png" alt="Delivery"> 
+                Standard Delivery ৳ 60 <br> Guaranteed by 24-27 Sep
+            </div>
+            <div class="cash-on-delivery">
+                <img src="https://example.com/cash-icon.png" alt="Cash on Delivery"> 
+                Cash on Delivery Available
+            </div>
+
+            <div class="return-warranty">
+                <div class="return-policy">
+                    <img src="https://example.com/return-icon.png" alt="Return"> 
+                    14 Days Easy Return
+                </div>
+                <div class="warranty">
+                    <img src="https://example.com/warranty-icon.png" alt="Warranty"> 
+                    3 Months Brand Warranty
+                </div>
+            </div>
+
+            <div class="qr-app">
+                <img src="https://example.com/qr-code.png" alt="QR Code">
+                <div class="app-download">
+                    <div>Download app to enjoy exclusive discounts!</div>
+                    <div><a href="#">Scan with mobile</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function changeImage(src, videoSrc) {
+            document.getElementById('mainImage').src = src;
+            var videoContainer = document.getElementById('videoContainer');
+            var productVideo = document.getElementById('productVideo');
+            if (videoSrc) {
+                productVideo.src = videoSrc;
+                videoContainer.style.display = 'block';
+                productVideo.play();
+            } else {
+                videoContainer.style.display = 'none';
+                productVideo.pause();
+                productVideo.src = '';
+            }
+        }
+
+        function increaseQuantity() {
+            var quantity = document.getElementById('quantity');
+            quantity.value = parseInt(quantity.value) + 1;
+        }
+
+        function decreaseQuantity() {
+            var quantity = document.getElementById('quantity');
+            if (quantity.value > 1) {
+                quantity.value = parseInt(quantity.value) - 1;
+            }
+        }
+    </script>
+
+</body>
+</html>

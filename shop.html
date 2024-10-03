@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Section</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="hidden.css">
+    <script src="hidden.js"></script>
+    <link rel="stylesheet" href="lockfooter.css">
+    <script src="lockfooter.js"></script>
+<body>
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <div class="logo"><img src="image/logo.JPG" alt="icon1"></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="shop.html">Shop</a>
+            <a href="createaccount.html">Contact</a>
+        </nav>
+        <div class="icons">
+            <a href=""><img src="image/notifiction.png" alt="Chat"></a>
+            <a href="chat.html"><img src="image/bookmark.svg" alt="Bookmark"></a>
+            <a href="mony.html"><img src="image/mony.png" alt="Locker"></a>
+        </div>
+    </header>
+     <!-- Second Header -->
+     <div class="second-header">
+        <div class="offer">Take 20% off for fall.
+             Ends 9/30.</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for anything...">
+            <button>Search</button>
+        </div>
+        <div class="advanced">Advanced</div>
+    </div>
+
+   <div class="section-image10">
+        <div class="content-box">
+            <h1>Win at gifting with cyinthia eGift Cards</h1>
+            <p>Spoil them with choice on any occasion with heartwarming designs and hassle-free redemption.</p>
+            <button>Start gifting</button>
+        </div>
+    </div>
+    <section class="content-section">
+    <div class="image-container">
+      <img src="image/brand.webp" alt="Center Image">
+    </div>
+    <div class="text-container">
+      <h2>Up to 60% off at The Brand Outlet</h2>
+      <p>Save big on the brands you love, all in one place.</p>
+    </div>
+  </section>
+    <h2><center>Celebrate upcoming occasions</center></h2>
+    <div class="right-section">
+        <button class="arrow left-arrow" onclick="prevSlide()">&#8249;</button>
+        <div class="slider-wrapper">
+            <div class="image-container" id="imageSlider">
+                <div class="slide active">
+                    <img src="image/birth.webp" alt="Product 1">
+                    <p>Birthday</p>
+                </div>
+                <div class="slide">
+                    <img src="image/ani.webp" alt="Product 2">
+                    <p>Anniversary</p>
+                </div>
+                <div class="slide">
+                    <img src="image/baby.webp" alt="Product 3">
+                    <p>New baby</p>
+                </div>
+                <div class="slide">
+                    <img src="image/any time.webp" alt="Product 4">
+                    <p>Anytime</p>
+                </div>
+                <div class="slide">
+                    <img src="image/eid.webp" alt="Product 5">
+                    <p>Eid</p>
+                </div>
+                <div class="slide">
+                    <img src="image/things.webp" alt="Product 6">
+                    <p>Things they love</p>
+                </div>
+              </div>
+        </div>
+        <button class="arrow right-arrow" onclick="nextSlide()">&#8250;</button>
+    </div>
+    
+        
+    </div>
+  <div class="container">
+        <!-- Left Section with filters -->
+        <div class="left-section">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-button">Search</button>
+            </div>
+            
+            <div class="dropdown-section">
+                <label for="best-match">Best Match:</label>
+                <select id="best-match">
+                    <option value="best-match">Best Match</option>
+                    <option value="lowest-price">Lowest Price</option>
+                    <option value="highest-price">Highest Price</option>
+                    <option value="newest">Newest</option>
+                </select>
+            </div>
+
+            <div class="dropdown-section">
+                <label for="show-items">Show items priced from:</label>
+                <select id="price-filter">
+                    <option value="all">$ - $ ></option>
+                    <option value="0-100">$0 - $100</option>
+                    <option value="100-200">$100 - $200</option>
+                </select>
+            </div>
+
+            <div class="filter-section">
+                <h3>Buying Format</h3>
+                <label><input type="checkbox" id="auction-filter" value="auction"> Auction</label><br>
+                <label><input type="checkbox" id="buyitnow-filter" value="buyitnow"> Buy It Now</label><br>
+                <label><input type="checkbox" id="classified-filter" value="classified"> Classified Ads</label>
+            </div>
+
+            <div class="filter-section">
+                <h3>Delivery Options</h3>
+                <label><input type="checkbox" id="freeshipping-filter" value="free-shipping"> Free Shipping</label><br>
+                <label><input type="checkbox" id="instorepickup-filter" value="in-store-pickup"> Free In-store Pickup</label>
+            </div>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="main-section">
+            <div class="view-options">
+                <label for="view">View:</label>
+                <select id="view">
+                    <option value="list-view">List View</option>
+                    <option value="grid-view" selected>Grid View</option>
+                </select>
+            </div>
+
+            <div class="product-grid" id="product-grid">
+                <div class="product-item" data-price="219.99" data-format="buyitnow" data-shipping="free-shipping">
+                    <img src="image/product.webp" alt="Product Image">
+                    <p>Dyson TP4A Pure Cool™ tower purifier fan | White/Silver | Refurbished</p>
+                    <p><strong>$219.99</strong> <span>Was: $549.99</span></p>
+                    <p><em>eBay Refurbished</em></p>
+                </div>
+                <div class="product-item" data-price="150.00" data-format="auction" data-shipping="in-store-pickup">
+                    <img src="image/product.webp" alt="Product Image">
+                    <p>Dyson TP4A Pure Cool™ tower purifier fan | White/Silver | Auction</p>
+                    <p><strong>$150.00</strong></p>
+                    <p><em>eBay Refurbished</em></p>
+                </div>
+                <div class="product-item" data-price="100.00" data-format="classified" data-shipping="free-shipping">
+                    <img src="image/product.webp" alt="Product Image">
+                    <p>Dyson TP4A Pure Cool™ tower purifier fan | White/Silver | Classified</p>
+                    <p><strong>$100.00</strong></p>
+                    <p><em>eBay Refurbished</em></p>
+                </div>
+            </div>
+        </div>
+    </div>
+ <section class="image-section">
+        <h2 class="section-heading">Shop Certified by Brand</h2>
+        <div class="image-container">
+            <div class="image-box">
+                <img src="image/product.webp" alt="Image 1">
+                <div class="content">
+                    <h3>Up to 20% off Citizen</h3>
+                    <p>Explore Certified by Brand pieces.</p>
+                    <button class="image-btn">Shop Now</button>
+                </div>
+            </div>
+            <div class="image-box">
+                <img src="image/product.webp" alt="Image 2">
+                <div class="content">
+                    <h3>Up to 20% off Citizen</h3>
+                    <p>Explore Certified by Brand pieces.</p>
+                    <button class="image-btn">Shop Now</button>
+                </div>
+            </div>
+            <div class="image-box">
+                <img src="image/product.webp" alt="Image 3">
+                <div class="content">
+                    <h3>Up to 20% off Citizen</h3>
+                    <p>Explore Certified by Brand pieces.</p>
+                    <button class="image-btn">Shop Now</button>
+                </div>
+            </div>
+           <div class="image-box">
+                <img src="image/product.webp" alt="Image 5">
+                <div class="content">
+                    <h3>Up to 20% off Citizen</h3>
+                    <p>Explore Certified by Brand pieces.</p>
+                    <button class="image-btn">Shop Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="box-section">
+    
+        <div class="row">
+            <div class="heading-icon" onclick="togglePara(1)">
+                <i class="icon">+</i>
+                <h2>FAQ</h2>
+            </div>
+            <p class="hidden" id="para-1">Business must be carried out with a high degree of ethics, honesty and fair dealings; ensuring staff is familiar with such policies/procedures and does not engage in threats, bribery or corruption practices. The offering, paying, soliciting or accepting of bribes or kick-backs, including facilitation payments, is strictly prohibited.</p>
+        </div>
+        
+   
+        <div class="row">
+            <div class="heading-icon" onclick="togglePara(2)">
+                <i class="icon">+</i>
+                <h2>Terms & Conditions</h2>
+            </div>
+            <p class="hidden" id="para-2">Employment of children in any form is strictly prohibited. Business partners and suppliers shall employ only those workers, who meet the minimum age criterion of 14 years or legal minimum age for working in any specific country, whichever is greater. Further, workers below 18 years of age should not be employed night shifts and in hazardous conditions. All applicable laws relating to young labor including employment, wages, working hours, overtime and working conditions shall be complied with.</p>
+        </div>
+        
+        <!-- Repeat for rows up to 13 -->
+    </div>
+     <!-- Footer Section -->
+     <footer>
+        <div class="footer-container">
+          <div class="footer-column">
+            <h3>Customer Service</h3>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Track Order</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Shipping Info</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-column">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-column Payment">
+            <h3>Payment</h3>
+            <div class="payment-icons">
+              <a href="#"><img src="image/am.PNG" alt="Facebook"></a>
+              <a href="#"><img src="image/em.PNG" alt="Twitter"></a>
+             </div>
+          </div>
+      
+         
+        <div class="footer-column follow-us">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="#"><img src="image/facebook.png" alt="Facebook"></a>
+              <a href="#"><img src="image/google.png" alt="Twitter"></a>
+              <a href="#"><img src="image/instrg.png" alt="Instagram"></a>
+              <a href="#"><img src="image/you.png" alt="LinkedIn"></a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="footer-inner-last">
+          <p>© 2024 Cyinthia. All rights reserved.</p>
+        </div>
+      </footer>
+    <script src="script1.js"></script>
+    <script src="shop.js"></script>
+   </body>
+</html>
