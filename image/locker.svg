@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="48" height="48" viewBox="0 0 48 48" id="locker">
+  <g>
+    <circle cx="24" cy="30" r="2"></circle>
+    <path d="M24 38a1 1 0 0 1-1-1v-6a1 1 0 1 1 2 0v6a1 1 0 0 1-1 1z"></path>
+    <path d="M42 48H6V18h36v30zM8 46h32V20H8v26z"></path>
+    <path d="M36 19h-2v-7c0-5.514-4.486-10-10-10S14 6.486 14 12h-2c0-6.617 5.383-12 12-12s12 5.383 12 12v7z"></path>
+  </g>
+</svg>
