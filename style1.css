@@ -1,0 +1,430 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+ /* Sticky Header */
+ .sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.sticky-header .logo img {
+    width: 50px;
+    height: 50px;
+}
+.sticky-header nav {
+    display: flex;
+    gap: 20px;
+}
+.sticky-header nav a {
+    color: black;
+}
+.sticky-header .icons img {
+    width: 20px;
+    height: 20px;
+}
+
+ /* Second Header */
+ .second-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+}
+.second-header .offer {
+    font-size: 18px;
+}
+.second-header .search-bar {
+    display: flex;
+    align-items: center;
+}
+.second-header input[type="text"] {
+    padding: 10px;
+    width: 400px;
+    border: 1px solid #ccc;
+}
+.second-header select, .second-header button {
+    padding: 10px;
+    margin-left: 5px;
+}
+.section-image10 {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background-image: url('image/ss.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.content-box {
+    padding: 100px;
+    max-width: 400px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.content-box h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.content-box p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.content-box button {
+    padding: 10px 20px;
+    background-color: #d89e9e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.content-box button:hover {
+    background-color: #555;
+}
+
+@media (max-width: 768px) {
+    .content-box h1 {
+        font-size: 28px;
+    }
+
+    .content-box p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-image {
+        padding-left: 20px;
+    }
+
+    .content-box {
+        max-width: 90%;
+    }
+
+    .content-box h1 {
+        font-size: 24px;
+    }
+
+    .content-box p {
+        font-size: 14px;
+    }
+}
+
+.content-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 50px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  flex: 1;
+  text-align: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.text-container {
+  flex: 1;
+  padding-left: 40px;
+}
+
+.text-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.text-container p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif; /* Set font for the body */
+    background-color: #f9f9f9; /* Light background color */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and borders are included in element width and height */
+}
+
+/* Right Section and Slider Wrapper */
+.right-section {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center align elements */
+    margin: 20px; /* Space around the section */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.slider-wrapper {
+    overflow: hidden; /* Hide overflowing images */
+    width: 100%; /* Full width for responsiveness */
+    max-width: 1000px; /* Limit width to 1000px */
+    position: relative; /* Position for absolute positioning */
+}
+
+/* Image Slider */
+.image-container {
+    display: flex; /* Align images in a row */
+    transition: transform 0.5s ease; /* Smooth transition for sliding */
+}
+
+.slide {
+    min-width: 200px; /* Width of each slide */
+    text-align: center; /* Center align text below image */
+    margin-right: 10px; /* Space between slides */
+}
+
+img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+/* Slider Arrows */
+.arrow {
+   border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 24px; /* Adjust button size */
+    padding: 10px; /* Button padding */
+    color: #007BFF; /* Arrow color */
+}
+
+/* More Images Button */
+.more-images {
+    margin-left: 20px; /* Space between slider and button */
+    padding: 5px 10px; /* Button padding */
+    cursor: pointer; /* Pointer cursor */
+    
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Container Styles */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    flex-wrap: wrap; /* Allow items to wrap for smaller screens */
+}
+
+.left-section, .main-section {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.left-section {
+    flex: 1;
+    margin-right: 10px; /* Space between left and main section */
+}
+
+.main-section {
+    flex: 2;
+    margin-left: 10px;
+}
+
+/* Search Bar Styles */
+.search-bar {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Dropdown Styles */
+.dropdown-section {
+    margin-bottom: 15px;
+}
+
+.dropdown-section label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Product Grid Styles */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-item {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section {
+        margin-bottom: 20px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Stack items in mobile view */
+    }
+
+    .slider-wrapper {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .slide {
+        min-width: 150px; /* Adjust slide width for smaller screens */
+    }
+}
+.image-section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.image-box {
+    position: relative;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 1;
+}
+
+.image-box img {
+    width: 300%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    max-width: 50%;
+    height: 100%;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.image-btn {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 50px 10%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    transition: background-color 3.3s ease;
+}
+
+.image-btn:hover {
+    background-color: #ff4a4a;
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .image-box {
+        margin-bottom: 20px;
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .image-box {
+        flex: 1 1 100%;
+    }
+
+    .content {
+        max-width: 70%;
+    }
+
+    .image-btn {
+        left: 10px;
+        bottom: 10px;
+        font-size: 0.5rem;
+        padding: 8px 15px;
+    }
+}
