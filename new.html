@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Slider Container Styling */
+        .slider-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Slider Styling */
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-image {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        /* Buttons for Slider */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Hide buttons on small screens */
+        @media (max-width: 768px) {
+            .prev, .next {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-100">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex items-center justify-between py-3 px-4">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="image/logo.JPG" alt="Logo" class="h-12 md:h-14 lg:h-16">
+                </a>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-800 hover:text-gray-600">Home</a>
+                <a href="about.html" class="text-gray-800 hover:text-gray-600">About</a>
+                <a href="shop.html" class="text-gray-800 hover:text-gray-600">Shop</a>
+                <a href="createaccount.html" class="text-gray-800 hover:text-gray-600">Contact</a>
+            </nav>
+
+            <!-- Icons Section -->
+            <div class="flex space-x-4">
+                <a href="#"><img src="image/notifiction.png" alt="Notification Icon" class="h-6 md:h-8"></a>
+                <a href="chat.html"><img src="image/bookmark.svg" alt="Bookmark Icon" class="h-6 md:h-8"></a>
+                <a href="mony.html"><img src="image/mony.png" alt="Locker Icon" class="h-6 md:h-8"></a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="h-8 w-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <nav id="mobile-menu" class="md:hidden hidden flex flex-col items-start space-y-2 bg-white px-4 pb-4">
+            <a href="index.html" class="text-gray-800">Home</a>
+            <a href="about.html" class="text-gray-800">About</a>
+            <a href="shop.html" class="text-gray-800">Shop</a>
+            <a href="createaccount.html" class="text-gray-800">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Slider Section -->
+    <div class="slider-container">
+        <div class="slider">
+            <img src="image/slide1.webp" class="slider-image" alt="Image 1">
+            <img src="image/slide2.webp" class="slider-image" alt="Image 2">
+            <img src="image/slide3.webp" class="slider-image" alt="Image 3">
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content-container flex justify-between items-center w-4/5 mx-auto mt-10 p-8 bg-red-100">
+        <div class="left-side flex-1 pr-4">
+            <p class="text-lg text-gray-800">Time for a pre-loved fit check. Enter your sustainability era with top
+                fashion brands.</p>
+        </div>
+        <div class="right-side flex-1 text-right">
+            <button class="shop-now-btn px-6 py-2 bg-orange-500 text-white rounded hover:bg-orange-600">Shop Now</button>
+        </div>
+    </div>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slider JS -->
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.slider-image');
+            if (index >= slides.length) currentSlide = 0;
+            if (index < 0) currentSlide = slides.length - 1;
+            const newTransform = `translateX(-${currentSlide * 100}%)`;
+            document.querySelector('.slider').style.transform = newTransform;
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 3000); // Automatically change slide every 3 seconds
+    </script>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>

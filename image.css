@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+imabody {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.image container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    width: 600px;
+}
+
+.text-section h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.text-section p {
+    color: #555;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.button-section {
+    margin-left: 20px;
+}
+
+#sellButton {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#sellButton:hover {
+    background-color: #e64a19;
+}

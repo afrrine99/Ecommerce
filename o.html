@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Page Layout</title>
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Sticky Header */
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .sticky-header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .sticky-header nav {
+            display: flex;
+            gap: 20px;
+        }
+        .sticky-header nav a {
+            color: white;
+        }
+        .sticky-header .icons img {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Second Header */
+        .second-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+        }
+        .second-header .offer {
+            font-size: 18px;
+        }
+        .second-header .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        .second-header input[type="text"] {
+            padding: 10px;
+            width: 400px;
+            border: 1px solid #ccc;
+        }
+        .second-header select, .second-header button {
+            padding: 10px;
+            margin-left: 5px;
+        }
+
+        /* Section with large image and content */
+        .section-large-image {
+            display: flex;
+            align-items: center;
+            margin: 40px 0;
+        }
+        .section-large-image .text-content {
+            max-width: 50%;
+            padding: 20px;
+        }
+        .section-large-image img {
+            width: 50%;
+        }
+        .section-large-image .button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+        }
+
+        /* Filter Section */
+        .filter-section {
+            display: flex;
+            justify-content: space-between;
+        }
+        .filter-section .filters {
+            width: 25%;
+            padding: 20px;
+            background-color: #f1f1f1;
+        }
+        .filter-section .filters label {
+            display: block;
+            margin: 10px 0;
+        }
+        .filter-section .filters select, .filter-section .filters input[type="checkbox"] {
+            margin: 5px;
+        }
+        .filter-section .product-list {
+            width: 70%;
+        }
+        .filter-section .product-list .search-bar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .filter-section .product-list .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .filter-section .product-list .product-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Three Column Section */
+        .three-column-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .three-column-section .column {
+            padding: 20px;
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+
+        /* Image Slider Section */
+        .image-slider-section {
+            text-align: center;
+            padding: 40px 0;
+        }
+        .image-slider-section .slider {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-slider-section .slider img {
+            width: 150px;
+            height: 150px;
+            margin: 0 10px;
+        }
+
+        /* Two Image Section */
+        .two-image-section {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+        .two-image-section .image-box {
+            width: 45%;
+            text-align: center;
+        }
+        .two-image-section .image-box img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <div class="logo">Logo</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Shop</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="icons">
+            <img src="img1.png" alt="icon1">
+            <img src="img2.png" alt="icon2">
+            <img src="img3.png" alt="icon3">
+        </div>
+    </header>
+
+    <!-- Second Header -->
+    <div class="second-header">
+        <div class="offer">Take 20% off for fall. Ends 9/30. Stylish Array</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for anything...">
+            <select>
+                <option>Category</option>
+            </select>
+            <button>Search</button>
+        </div>
+        <div class="advanced">Advanced</div>
+    </div>
+
+    <!-- Section with Large Image and Content -->
+    <section class="section-large-image">
+        <div class="text-content">
+            <h2>Header for Section</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button class="button">Stylish Button</button>
+        </div>
+        <img src="large-image.jpg" alt="Large Image">
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <!-- Filters -->
+        <aside class="filters">
+            <h3>Category</h3>
+            <label><input type="checkbox"> All</label>
+            <label><input type="checkbox"> Condition</label>
+            <label>Price: $100 - $150</label>
+            <label>Buying Format</label>
+            <select>
+                <option>All</option>
+                <option>Auction</option>
+                <option>Buy It Now</option>
+            </select>
+            <label><input type="checkbox"> Auction</label>
+            <label><input type="checkbox"> Buy It Now</label>
+            <h3>Item Location</h3>
+            <label><input type="checkbox"> Mirpur</label>
+            <label><input type="checkbox"> Dhaka</label>
+            <label>Delivery Option</label>
+            <select>
+                <option>Free Shipping</option>
+            </select>
+            <label><input type="checkbox"> Free Shipping</label>
+            <label><input type="checkbox"> Free In-store Pickup</label>
+        </aside>
+
+        <!-- Product List -->
+        <div class="product-list">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <select>
+                    <option>Best Match</option>
+                    <option>Lowest Price</option>
+                    <option>Highest Price</option>
+                </select>
+            </div>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="product1.jpg" alt="Product 1">
+                    <p>Product 1</p>
+                </div>
+                <div class="product-item">
+                    <img src="product2.jpg" alt="Product 2">
+                    <p>Product 2</p>
+                </div>
+                <div class="product-item">
+                    <img src="product3.jpg" alt="Product 3">
+                    <p>Product 3</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three Column Section -->
+    <section class="three-column-section">
+        <div class="column">
+            <h3>Heading 1</h3>
+            <p>Some paragraph here for column 1.</p>
+        </div>
+        <div class="column">
+            <h3>Heading 2</h3>
+            <p>Some paragraph here for column 2.</p>
+        </div>
+        <div class="column">
+            <h3>Heading 3</h3>
+            <p>Some paragraph here for column 3.</p>
+        </div>
+    </section>
+
+    <!-- Image Slider Section -->
+    <section class="image-slider-section">
+        <h2>Beautiful Image Slider</h2>
+        <div class="slider">
+            <button onclick="previousImage()">&#60;</button>
+            <img src="image1.jpg" alt="Image 1" id="slider-image">
+            <button onclick="nextImage()">&#62;</button>
+        </div>
+    </section>
+
+    <!-- Two Image Section -->
+    <section class="two-image-section">
+        <div class="image-box">
+            <img src="image1.jpg" alt="Image 1">
+            <h3>Image Heading 1</h3>
+            <p>Description for image 1</p>
+        </div>
+        <div class="image-box">
+            <img src="image2.jpg" alt="Image 2">
+            <h3>Image Heading 2</h3>
+            <p>Description for image 2</p>
+        </div>
+    </section>
+
+    <script>
+        // Simple image slider logic
+        let currentImage = 1;
+        const totalImages = 5;
+
+        function previousImage() {
+            currentImage--;
+            if (currentImage < 1) {
+                currentImage = totalImages;
+            }
+            document.getElementById('slider-image').src = 'image' + currentImage + '.jpg';
+        }
+
+        function nextImage() {
+            currentImage++;
+            if (currentImage > totalImages) {
+                currentImage = 1;
+            }
+            document.getElementById('slider-image').src = 'image' + currentImage + '.jpg';
+        }
+    </script>
+
+</body>
+</html>

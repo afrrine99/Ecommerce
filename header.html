@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+   <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #stickyHeader {
+            background-color: #fff;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .main-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .nav-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            cursor: pointer;
+        }
+        .cart-icons a img {
+            height: 25px;
+            margin-left: 15px;
+        }
+        /* Main content styling */
+        .main-content {
+            padding: 20px;
+            background-color: #f9f9f9;
+            min-height: 600px; /* Adjust based on content */
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<header id="stickyHeader">
+    <div class="main-header">
+        <div class="logo">
+            <a href="index.html"><img src="image/logo.JPG" alt="Logo"></a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" data-page="home">Home</a>
+            <a href="about.html" data-page="about">About</a>
+            <a href="shop.html" data-page="shop">Shop</a>
+            <a href="createaccount.html" data-page="contact">Contact</a>
+        </nav>
+        <div class="cart-icons">
+            <a href=""><img src="image/notifiction.png" alt="Chat"></a>
+            <a href="chat.html"><img src="image/bookmark.svg" alt="Bookmark"></a>
+            <a href="mony.html"><img src="image/mony.png" alt="Locker"></a>
+        </div>
+    </div>
+</header>
+/* Main content styling */
+<main class="main-content">
+    <div class="section">
+        <h1>Welcome to Our Website</h1>
+        <p>This is a sample main content area where you can add more information about your website.</p>
+    </div>
+    <div class="section">
+        <h2>About Us</h2>
+        <p>Here you can provide details about your company, services, or any other relevant information.</p>
+    </div>
+</main>
+
+</body>
+</html>

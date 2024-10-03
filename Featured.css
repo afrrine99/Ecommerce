@@ -1,0 +1,109 @@
+.main-content-container {
+    text-align: center;
+    padding: 50px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.center-heading h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+/* General styling */
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.product-inner-header {
+    padding: 10px;
+    background-color: #f8f8f8;
+}
+
+.sale-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+}
+
+.product-inner-footer {
+    padding: 15px;
+}
+
+.product-name {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.center-icons {
+    justify-content: center; /* Center the icon group */
+}
+
+.cart-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.cart-icons img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.cart-icons img:hover {
+    transform: scale(1.2); /* Grow the icon on hover */
+}
+
+/* Align the price and Add to Cart icon */
+.last-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cart-image {
+    width: 25px; /* Adjust size of the cart icon */
+    height: 25px;
+    cursor: pointer;
+}
+
+.cart-image:hover {
+    transform: scale(1.2); /* Grow the cart icon on hover */
+}
+

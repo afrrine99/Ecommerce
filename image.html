@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        /* Add CSS styles here */
+       image slider body {
+            font-family: Arial, sans-serif; /* Set font for the body */
+            background-color: #f9f9f9; /* Light background color */
+        }
+
+        .right-section  {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center align elements */
+            margin: 20px; /* Space around the section */
+        }
+
+        .slider-wrapper {
+            overflow: hidden; /* Hide overflowing images */
+            width: 1000px; /* Adjust width as needed for 5 images */
+            position: relative; /* Position for absolute positioning */
+        }
+
+        .image-container {
+            display: flex; /* Align images in a row */
+            transition: transform 0.5s ease; /* Smooth transition for sliding */
+        }
+
+        .slide {
+            min-width: 200px; /* Width of each slide */
+            text-align: center; /* Center align text below image */
+            margin-right: 10px; /* Space between slides */
+        }
+
+        img {
+            width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Rounded corners for images */
+        }
+
+        .arrow {
+            background: none; /* No background for buttons */
+            border: none; /* No border */
+            cursor: pointer; /* Pointer cursor */
+            font-size: 24px; /* Adjust button size */
+            padding: 10px; /* Button padding */
+            color: #007BFF; /* Arrow color */
+        }
+
+        .more-images {
+            margin-left: 20px; /* Space between slider and button */
+            padding: 5px 10px; /* Button padding */
+            cursor: pointer; /* Pointer cursor */
+            background-color: #007BFF; /* Button color */
+            color: white; /* Button text color */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+        }
+    </style>
+</head>
+<body>
+    <div class="right-section">
+        <button class="arrow left-arrow" onclick="prevSlide()">&#8249;</button>
+        <div class="slider-wrapper">
+            <div class="image-container" id="imageSlider">
+                <div class="slide">
+                    <img src="image/birth.webp" alt="Birthday">
+                    <p>Birthday</p>
+                </div>
+                <div class="slide">
+                    <img src="image/ani.webp" alt="Anniversary">
+                    <p>Anniversary</p>
+                </div>
+                <div class="slide">
+                    <img src="image/baby.webp" alt="New baby">
+                    <p>New baby</p>
+                </div>
+                <div class="slide">
+                    <img src="image/any_time.webp" alt="Anytime">
+                    <p>Anytime</p>
+                </div>
+                <div class="slide">
+                    <img src="image/eid.webp" alt="Eid">
+                    <p>Eid</p>
+                </div>
+                <div class="slide">
+                    <img src="image/things.webp" alt="Things they love">
+                    <p>Things they love</p>
+                </div>
+                <div class="slide">
+                    <img src="image/product7.webp" alt="Product 7">
+                    <p>Product 7</p>
+                </div>
+                <div class="slide">
+                    <img src="image/product8.webp" alt="Product 8">
+                    <p>Product 8</p>
+                </div>
+                <div class="slide hidden">
+                    <img src="image/new_image1.webp" alt="New Image 1">
+                    <p>New Image 1</p>
+                </div>
+                <div class="slide hidden">
+                    <img src="image/new_image2.webp" alt="New Image 2">
+                    <p>New Image 2</p>
+                </div>
+            </div>
+        </div>
+        <button class="arrow right-arrow" onclick="nextSlide()">&#8250;</button>
+        
+    </div>
+
+    <script>
+        let currentIndex = 0; // Current image index
+        const slides = document.querySelectorAll('.slide'); // Get all slides
+        const hiddenSlides = document.querySelectorAll('.hidden'); // Get hidden slides
+        let moreVisible = false; // Track whether more images are visible
+
+        function showSlide(index) {
+            const totalSlides = slides.length;
+            // Ensure the index is within bounds
+            currentIndex = (index + totalSlides) % totalSlides; // Wrap around if out of bounds
+            const offset = -currentIndex * 210; // Calculate the offset based on the slide width (200px + 10px margin)
+            document.getElementById('imageSlider').style.transform = `translateX(${offset}px)`;
+        }
+
+        function nextSlide() {
+            if (currentIndex < slides.length - 5) { // Check if there are more slides to show
+                showSlide(currentIndex + 1); // Move to next slide
+            }
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) { // Check if there are previous slides to show
+                showSlide(currentIndex - 1); // Move to previous slide
+            }
+        }
+
+        function showMore() {
+            if (!moreVisible) {
+                hiddenSlides.forEach(slide => {
+                    slide.classList.remove('hidden'); // Show hidden images
+                });
+                moreVisible = true; // Update the visibility state
+            } else {
+                alert('No more images to show!'); // Alert if already showing all images
+            }
+        }
+
+        // Show the first slide initially
+        showSlide(currentIndex);
+    </script>
+</body>
+</html>

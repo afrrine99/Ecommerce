@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Filter and Products Section</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section with filters -->
+        <div class="left-section">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+            
+            <div class="dropdown-section">
+                <label for="best-match">Best Match:</label>
+                <select id="best-match">
+                    <option value="best-match">Best Match</option>
+                    <option value="lowest-price">Lowest Price</option>
+                    <option value="highest-price">Highest Price</option>
+                    <option value="newest">Newest</option>
+                </select>
+            </div>
+
+            <div class="dropdown-section">
+                <label for="show-items">Show items priced from:</label>
+                <select id="show-items">
+                    <option value="">$ - $ ></option>
+                    <option value="0-100">$0 - $100</option>
+                    <option value="100-200">$100 - $200</option>
+                </select>
+            </div>
+
+            <div class="filter-section">
+                <h3>Buying Format</h3>
+                <label><input type="checkbox"> Auction</label><br>
+                <label><input type="checkbox"> Buy It Now</label><br>
+                <label><input type="checkbox"> Classified Ads</label>
+            </div>
+
+            <div class="filter-section">
+                <h3>Delivery Options</h3>
+                <label><input type="checkbox"> Free Shipping</label><br>
+                <label><input type="checkbox"> Free In-store Pickup</label>
+            </div>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="main-section">
+            <div class="view-options">
+                <label for="view">View:</label>
+                <select id="view">
+                    <option value="list-view">List View</option>
+                    <option value="grid-view">Grid View</option>
+                </select>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="https://via.placeholder.com/150" alt="Product Image">
+                    <p>Dyson TP4A Pure Cool™ tower purifier fan | White/Silver | Refurbished</p>
+                    <p><strong>$219.99</strong> <span>Was: $549.99</span></p>
+                    <p><em>eBay Refurbished</em></p>
+                </div>
+                <div class="product-item">
+                    <img src="https://via.placeholder.com/150" alt="Product Image">
+                    <p>Dyson TP4A Pure Cool™ tower purifier fan | White/Silver | Refurbished</p>
+                    <p><strong>$219.99</strong> <span>Was: $549.99</span></p>
+                    <p><em>eBay Refurbished</em></p>
+                </div>
+                <div class="product-item">
+                    <img src="https://via.placeholder.com/150" alt="Product Image">
+                    <p>Dyson TP4A Pure Cool™ tower purifier fan | White/Silver | Refurbished</p>
+                    <p><strong>$219.99</strong> <span>Was: $549.99</span></p>
+                    <p><em>eBay Refurbished</em></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>

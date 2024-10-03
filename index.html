@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daraz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lockfooter.css">
+    <script src="lockfooter.js"></script>
+    <link rel="stylesheet" href="ca.css">
+    <script src="ca.js"></script>
+    <link rel="stylesheet" href="subscribe.css">
+    <script src="subscribe.js"></script>
+    <link rel="stylesheet" href="new.css">
+    <script src="new.js"></script>
+    </head>
+<body>
+    <header id="stickyHeader">
+        <div class="main-header">
+            <div class="logo">
+                <a href="index.html"><img src="image/logo.JPG" alt="Logo"></a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" data-page="home">Home</a>
+                <a href="about.html" data-page="about">About</a>
+                <a href="shop.html" data-page="shop">Shop</a>
+                <a href="createaccount.html" data-page="contact">Contact</a>
+            </nav>
+            <div class="cart-icons">
+                <a href=""><img src="image/notifiction.png" alt="Chat"></a>
+            <a href="chat.html"><img src="image/bookmark.png" alt="Bookmark"></a>
+            <a href="mony.html"><img src="image/mony.png" alt="Locker"></a>
+            </div>
+        </div>
+    </header>
+    <body>
+        <div class="slider-container" style="width: 80%; margin: 0 auto; position: relative;">
+            <div class="slider" style="display: flex; overflow: hidden;">
+                <img src="image/slide1.webp" class="slider-image" alt="Image 1" style="width: 100%;">
+                <img src="image/slide2.webp" class="slider-image" alt="Image 2" style="width: 100%;">
+                <img src="image/slide1.webp" class="slider-image" alt="Image 3" style="width: 100%;">
+            </div>
+            <button class="prev" onclick="prevSlide()" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%);">&#10094;</button>
+            <button class="next" onclick="nextSlide()" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%);">&#10095;</button>
+        </div>
+    
+        <!-- New container with text and button -->
+        <div class="content-container" style="display: flex; justify-content: space-between; align-items: center; width: 80%; margin: 30px auto; padding: 20px; background-color: #dab5b5;">
+            <div class="left-side" style="flex: 1; padding-right: 20px;">
+                <p style="font-size: 18px; color: #333;">Time for a pre-loved fit check. Enter your sustainability era with top fashion brands.</p>
+            </div>
+            <div class="right-side" style="flex: 1; text-align: right;">
+                <button class="shop-now-btn" style="padding: 10px 20px; background-color: #FF4500; color: white; border: none; cursor: pointer; font-size: 16px;">Shop Now</button>
+            </div>
+        </div>
+    
+        <script>
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slider-image');
+    
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.style.transform = `translateX(${(i - index) * 100}%)`;
+                });
+            }
+    
+            function prevSlide() {
+                currentSlide = (currentSlide > 0) ? currentSlide - 1 : slides.length - 1;
+                showSlide(currentSlide);
+            }
+    
+            function nextSlide() {
+                currentSlide = (currentSlide < slides.length - 1) ? currentSlide + 1 : 0;
+                showSlide(currentSlide);
+            }
+    
+            showSlide(currentSlide);
+        </script>
+    </body>
+    <div class="flash-sale-section">
+        <p class="hp-mod-card-title">Trending in Watches</p>
+        <button class="nav-btn prev-btn" id="prevBtn" disabled>&lt;</button>
+        <div class="card-fs-content-body">
+            <div class="fs-product-grid" id="productGrid">
+                <!-- Product 1 -->
+                <a class="card-fs-content-body-unit" href="product.html">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Add more product cards similarly -->
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <button class="nav-btn next-btn" id="nextBtn">&gt;</button>
+    </div>
+
+    <div class="flash-sale-section">
+        <p class="hp-mod-card-title">Trending in Watches</p>
+        <button class="nav-btn prev-btn" id="prevBtn" disabled>&lt;</button>
+        <div class="card-fs-content-body">
+            <div class="fs-product-grid" id="productGrid">
+                <!-- Product 1 -->
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Add more product cards similarly -->
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <button class="nav-btn next-btn" id="nextBtn">&gt;</button>
+    </div>
+    <div class="flash-sale-section">
+        <p class="hp-mod-card-title">Take 20% off fall favorites</p>
+        <button class="nav-btn prev-btn" id="prevBtn" disabled>&lt;</button>
+        <div class="card-fs-content-body">
+            <div class="fs-product-grid" id="productGrid">
+                <!-- Product 1 -->
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Add more product cards similarly -->
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="card-fs-content-body-unit" href="#">
+                    <div class="fs-card-img-container">
+                        <img src="image/product.webp" alt="Product Image">
+                    </div>
+                    <div class="fs-card-text">
+                        <p class="fs-card-title">TWS A6S Wireless Bluetooth</p>
+                        <div class="fs-card-price">
+                            <span class="currency">৳</span><span class="price">232</span>
+                        </div>
+                        <div class="fs-card-origin-price">
+                            <span class="currency">৳</span><span class="price">842</span>
+                            <span class="itemDiscount">-72%</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <button class="nav-btn next-btn" id="nextBtn">&gt;</button>
+    </div>
+    <div class="cart-section">
+        <div class="cart-details">
+            <p>Featured</p>
+            <img src="image/logo.JPG" alt="Logo" class="logo">
+            <h1>Deals made easy all year long.</h1>
+            <p>Free shipping. Best prices.</p>
+            <button id="checkout-btn">Get your thing</button>
+        </div>
+        <div class="product-images">
+            <a href="image/pro.webp"><img src="image/pro.webp" alt="Product 1"></a>
+           </div>
+            <a href="image/pro.webp"><img src="image/pro.webp" alt="Product 1"></a>
+            <a href="image/pro.webp"><img src="image/pro.webp" alt="Product 2"></a>
+            </div>
+       </div>
+       <section class="subscribe-section">
+        <div class="container">
+            <div class="subscribe-left">
+                <h2><center>Subscribe And Get</center></h2>
+                <p><strong><center>10% OFF</center></strong></p>
+                <p><center>Get 10% discount for all products</center></p>
+            </div>
+            <div class="subscribe-right">
+                <form id="subscribeForm">
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit" class="subscribe-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+             <!-- Footer Section -->
+     <footer>
+        <div class="footer-container">
+          <div class="footer-column">
+            <h3>Customer Service</h3>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Track Order</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Shipping Info</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-column">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-column Payment">
+            <h3>Payment</h3>
+            <div class="social-icons">
+              <a href="#"><img src="image/am.PNG" alt="Facebook"></a>
+              <a href="#"><img src="image/em.PNG" alt="Twitter"></a>
+              <a href="#"><img src="image/nogod.PNG" alt="Instagram"></a>
+              <a href="#"><img src="image/bikash1.PNG" alt="LinkedIn"></a>
+            </div>
+          </div>
+      
+          <!-- New Follow Us Column -->
+          <div class="footer-column follow-us">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="#"><img src="image/facebook.png" alt="Facebook"></a>
+              <a href="#"><img src="image/google.png" alt="Twitter"></a>
+              <a href="#"><img src="image/instrg.png" alt="Instagram"></a>
+              <a href="#"><img src="image/you.png" alt="LinkedIn"></a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="footer-inner-last">
+          <p>© 2024 Cyinthia. All rights reserved.</p>
+        </div>
+      </footer>
+              </body>
+        </html>

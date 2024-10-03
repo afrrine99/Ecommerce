@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="lockfooter.css">
+    <script src="lockfooter.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 5px 6px;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .main-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .nav-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        .cart-icons a img {
+            height: 25px;
+            margin-left: 15px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .cart-icons a img:hover {
+            opacity: 0.7;
+        }
+         .app-popup {
+            display: none;
+            position: absolute;
+            top: 35px;
+            right: 0;
+            background-color: #ffffff;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            z-index: 1;
+            width: 300px;
+        }
+
+        .app-popup img {
+            width: 100px;
+            margin-right: 10px;
+        }
+
+        .app-popup .app-stores {
+            display: flex;
+            gap: 10px;
+        }
+
+        .app-popup .store-link img {
+            width: 120px;
+        }
+
+        .cart-icons:hover .app-popup {
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .search-bar-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .search-bar-section input {
+            width: 300px;
+            padding: 10px;
+            border-radius: 30px 0 0 30px;
+            border: 1px solid #ccc;
+        }
+
+        .search-bar-section select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .search-bar-section button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 0 30px 30px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-bar-section button:hover {
+            background-color: #0056b3;
+        }
+
+        .centered-content {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .centered-content h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .centered-content p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .centered-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .centered-buttons button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .centered-buttons button:hover {
+            background-color: #e0a800;
+        }
+
+        .extra-options {
+            text-align: right;
+        }
+
+        .extra-options button {
+            padding: 10px 20px;
+            color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: transparent;
+            transition: color 0.3s;
+        }
+
+        .extra-options button:hover {
+            color: #0056b3;
+        }
+
+    </style>
+</head>
+<header id="stickyHeader">
+    <div class="main-header">
+        <div class="logo">
+            <a href="index.html"><img src="image/logo.JPG" alt="Logo"></a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" data-page="home">Home</a>
+            <a href="Featured.html" data-page="about">About</a>
+            <a href="shop.html" data-page="shop">Shop</a>
+            <a href="createaccount.html" data-page="contact">Contact</a>
+        </nav>
+        <div class="cart-icons">
+            <a href=""><img src="image/notifiction.png" alt="Notifications"></a>
+            <div class="app-popup">
+                <p><center>Please sign-in to view notifications.</center></p>
+                </div>
+            <a href="chat.html"><img src="image/bookmark.svg" alt="Bookmark"></a>
+            <a href="mony.html"><img src="image/mony.png" alt="mony"></a>
+           </div>
+    </div>
+</header>
+<body>
+    <div class="container">
+        <div class="extra-options">
+            <button>Send Us Your Comments</button>
+        </div>
+
+        <div class="search-bar-section">
+            <input type="text" placeholder="Search...">
+            <select>
+                <option value="">All Categories</option>
+                <option value="electronics">Electronics</option>
+                <option value="fashion">Fashion</option>
+                <option value="home">Home & Living</option>
+                <option value="beauty">Beauty & Health</option>
+            </select>
+            <button>Search</button>
+        </div>
+
+        <div class="centered-content">
+            <h2>You don't have any items in your cart.</h2>
+            <p>Have an account? Sign in to see your items.</p>
+        </div>
+
+        <div class="centered-buttons">
+            <button onclick="window.location.href='shop.html';">Start shopping</button>
+           <button onclick="window.location.href='sigin.html';">Sign in</button>
+        </div>
+    </div>
+     <!-- Footer Section -->
+     <footer>
+        <div class="footer-container">
+          <div class="footer-column">
+            <h3>Customer Service</h3>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Track Order</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Shipping Info</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-column">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-column Payment">
+            <h3>Payment</h3>
+            <div class="social-icons">
+              <a href="#"><img src="image/am.PNG" alt="Facebook"></a>
+              <a href="#"><img src="image/em.PNG" alt="Twitter"></a>
+              <a href="#"><img src="image/nogod.PNG" alt="Instagram"></a>
+              <a href="#"><img src="image/bikash1.PNG" alt="LinkedIn"></a>
+            </div>
+          </div>
+      
+          <!-- New Follow Us Column -->
+          <div class="footer-column follow-us">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="#"><img src="image/facebook.png" alt="Facebook"></a>
+              <a href="#"><img src="image/google.png" alt="Twitter"></a>
+              <a href="#"><img src="image/instrg.png" alt="Instagram"></a>
+              <a href="#"><img src="image/you.png" alt="LinkedIn"></a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="footer-inner-last">
+          <p>© 2024 Cyinthia. All rights reserved.</p>
+        </div>
+      </footer>
+</body>
+</html>
